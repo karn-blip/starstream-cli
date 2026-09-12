@@ -1,0 +1,163 @@
+================================================================================
+           STAR STREAM TERMINAL ENGINE - INCARNATION SURVIVAL GUIDE
+================================================================================
+
+1. OVERVIEW
+--------------------------------------------------------------------------------
+The Star Stream Terminal Engine is a full Node.js terminal shell interface 
+integrated with deep RPG systems inspired by Omniscient Reader's Viewpoint (ORV).
+It executes all native operating system commands (PowerShell, CMD, Bash, Git, etc.)
+while tracking your progression as an Incarnation traversing the Seoul Dome scenarios.
+
+All session state (coins, fables, stats, channel, sponsor, favorability) persists
+automatically in a local '.starstream.json' file.
+
+
+2. SYSTEM COMMAND SUMMARY
+--------------------------------------------------------------------------------
+status                 : View Incarnation profile, stats, stigma, relics, and fables.
+status name <val>      : Change your Incarnation display name.
+scenario               : View active scenario objective, progress, and bounty.
+contract [1-5]         : Browse or sign a sponsor contract (Unlocked after Scenario #1).
+favor                  : Inspect Constellation favorability gauges and unlocked perks.
+fable                  : Open the Incarnation Fable Archive.
+fable recite           : Channel an acquired story to earn tribute coins.
+sponsor                : Petition watching Constellations for direct coin donations.
+shop                   : Open the Dokkaebi Bag to browse items, relics, and training.
+buy <code>             : Purchase items from the Dokkaebi Bag using coins.
+regress                : Initiate regression protocol to start a new turn loop.
+guide                  : Display this interactive in-terminal manual.
+channel <id>           : Switch broadcast frequencies to change hosts and viewership.
+theme <name>           : Switch visual color palettes (zen-pure, oldest-dream, etc.).
+clear                  : Clear terminal screen and redraw the Star Stream banner.
+exit / quit            : Terminate Star Stream broadcast session.
+
+
+3. SCENARIO PROGRESSION (SEOUL DOME)
+--------------------------------------------------------------------------------
+Progression centers around 8 Main Scenarios triggered by terminal actions:
+
+Main Scenario #1 - Proof of Value
+  * Objective : Execute any shell command 3 times.
+  * Bounty    : +300 Coins
+  * Reward    : Unlocks Sponsor Selection & [Historical] One Who Cheated Death fable.
+
+Main Scenario #2 - Escape the Ruins (Gumho Bridge)
+  * Objective : Navigate directories with 'cd' 4 times.
+  * Bounty    : +600 Coins
+
+Main Scenario #3 - Emergency Defense (Green Zone)
+  * Objective : Accumulate 7,000 Coins.
+  * Bounty    : +1,200 Coins
+
+Main Scenario #4 - The King’s Flag
+  * Objective : Switch frequencies with 'channel' 3 times.
+  * Bounty    : +2,000 Coins
+
+Main Scenario #5 - Absolute Throne
+  * Objective : Perform 8 system actions ('cd' or commands).
+  * Bounty    : +3,500 Coins
+  * Reward    : Unlocks [Narrative] King of a Kingless World fable.
+
+Main Scenario #6 - Abandoned World
+  * Objective : Petition Constellations with 'sponsor' 3 times.
+  * Bounty    : +5,000 Coins
+
+Main Scenario #7 - Demon King Selection
+  * Objective : Amass 15,000 Coins.
+  * Bounty    : +8,000 Coins
+  * Reward    : Unlocks [Myth] Demon King of Salvation fable.
+
+Main Scenario #8 - Liberation of Seoul Dome
+  * Objective : Clear your terminal screen with 'clear' 2 times.
+  * Bounty    : +15,000 Coins
+  * Reward    : Unlocks [Giant Story] Season of Light and Darkness fable.
+
+
+4. SPONSOR CONTRACTS & STIGMAS
+--------------------------------------------------------------------------------
+After clearing Main Scenario #1, type 'contract' to review and choose your backer:
+
+[1] Demon-like Judge of Fire
+    Stigma : Flames of Retribution Lv.1
+    Perk   : +50% Coin rewards on scenario clears & high coin donations.
+
+[2] Prisoner of the Golden Headband
+    Stigma : Somersault Agile Step Lv.1
+    Perk   : Doubles directory agility & cuts begging cooldown by 50%.
+
+[3] Abyssal Black Flame Dragon
+    Stigma : Black Flame Ignition Lv.1
+    Perk   : Gains +300 Coins whenever a command errors or fails.
+
+[4] Secretive Plotter
+    Stigma : Reader Divergence Lv.1
+    Perk   : Silently awards coins in the background during directory navigation.
+
+[5] Reject All Sponsors (Kim Dokja Route)
+    Stigma : Omniscient Reader's Viewpoint Lv.3
+    Perk   : Permanent 2x bounty multiplier on all scenario clears.
+    Reward : Unlocks [Historical] He Who Despised the Heavens fable.
+
+
+5. INCARNATION STATS
+--------------------------------------------------------------------------------
+Stats actively influence shell mechanics and scale via Dokkaebi Bag training:
+
+* Physique:
+  Directly reduces the annoying cooldown timer applied when spamming 'sponsor'.
+  Cooldown reduction = Math.floor((Physique - 10) / 4) seconds.
+
+* Agility:
+  Increases the percentage chance to scavenge terrain coins while using 'cd'.
+  Salvage Proc Chance = 15% + ((Agility - 10) * 2.5)%.
+
+* Magic:
+  Increases all coin payouts across scenarios, recitations, and donations.
+  Yield Multiplier = 1.0 + ((Magic - 10) * 2)%.
+
+
+6. CONSTELLATION FAVORABILITY & MILESTONES
+--------------------------------------------------------------------------------
+Run 'favor' to check gauges. Constellations react to your operational style:
+
+* Demon-like Judge of Fire:
+  - Gains favor from clean zero-error commands (+1) and fable recitations (+3).
+  - Loses favor when you crash commands (-1) or spam begging (-2).
+  - Milestones: 25% (+500 C whisper), 50% (+15% scenario coins), 75% (fine shield),
+    100% (Judgment Time Lv.1 stigma).
+
+* Prisoner of the Golden Headband:
+  - Gains favor from rapid 'cd' traversal (+2) and agility salvage procs.
+  - Milestones: 25% (+400 C peach pits), 50% (-2s sponsor cooldown), 
+    75% (salvage rate doubled), 100% (Somersault Cloud Lv.1 stigma).
+
+* Abyssal Black Flame Dragon:
+  - Gains favor from exit code errors (+4), ALL CAPS, and exclamation marks (+2).
+  - Milestones: 25% (+666 C), 50% (error bounty raised to +600 C), 75% (dark violet aura),
+    100% (Apocalypse Ignition Lv.1 stigma: +1500 C on crash).
+
+* Secretive Plotter:
+  - Gains favor from running informational tools ('status', 'favor', 'scenario', 'fable').
+  - Milestones: 25% (+300 C cipher), 50% (stealth coins doubled), 75% (premonitions),
+    100% (Oldest Dream's Shadow myth fable).
+
+
+7. THE DOKKAEBI BAG ('shop' & 'buy <code>')
+--------------------------------------------------------------------------------
+potion   : Ellain Forest Fluid (500 C)     - Instantly resets sponsor cooldowns.
+essence  : White Star Essence (2,500 C)    - Permanently increases all coin yields +25%.
+blade    : Unbroken Faith (4,000 C)        - Replaces shell prompt arrow with ether blade 🗡.
+stat-p   : Physique Training +5 (1,000 C)  - Adds +5 Physique levels.
+stat-a   : Agility Training +5 (1,000 C)   - Adds +5 Agility levels.
+stat-m   : Magic Training +5 (1,000 C)     - Adds +5 Magic levels.
+
+
+8. REGRESSION PROTOCOL ('regress')
+--------------------------------------------------------------------------------
+Typing 'regress' cycles your incarnation into the next turn (Turn 2, Turn 3...):
+  * Scenarios reset to Main Scenario #1 so you can re-clear and re-earn bounties.
+  * Current spending coins reset to 5,000 C.
+  * All purchased Stats, Relics, Unlocked Fables, and Favorability Milestones 
+    carry over permanently.
+================================================================================
